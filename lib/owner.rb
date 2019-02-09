@@ -15,5 +15,19 @@ class Owner
 
   def self.reset_all
     Owners.clear
-end
+  end
+  
+    def initialize(species)
+    @species = species
+    Owners << self
+    @pets = {:fishes => [], :dogs => [], :cats => []}
+ end
+
+  def say_species
+  "I am a #{species}."
+  end
+
+  def name
+    @name
+  end
 end
